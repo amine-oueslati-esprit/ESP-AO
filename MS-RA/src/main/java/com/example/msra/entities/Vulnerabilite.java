@@ -18,7 +18,7 @@ public class Vulnerabilite implements Serializable {
     @Setter(AccessLevel.NONE)
     long idvulnerabilite;
 
-    String desc_vul;
+    String descriptionVulnerabilite;
 
     /*//MM-B actifs concernes
     //child
