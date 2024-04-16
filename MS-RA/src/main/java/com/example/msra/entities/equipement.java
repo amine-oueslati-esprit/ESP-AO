@@ -1,3 +1,4 @@
+/*
 package com.example.msra.entities;
 
 import java.io.Serializable;
@@ -14,3 +15,4 @@ public class equipement extends Actif implements Serializable {
 
     boolean contrat_maintenance;
 }
+*/

@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +17,7 @@ import java.util.List;
 @Builder
 @Entity
 @FieldDefaults(level = AccessLevel.PRIVATE)
+
 public class Actif implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

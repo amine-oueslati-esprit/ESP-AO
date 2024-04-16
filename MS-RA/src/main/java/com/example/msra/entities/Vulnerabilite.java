@@ -1,8 +1,13 @@
 package com.example.msra.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
+
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Getter
@@ -11,6 +16,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Builder
 @Entity
+@FieldDefaults(level = AccessLevel.PRIVATE)
 
 public class Vulnerabilite implements Serializable {
     @Id
@@ -20,12 +26,14 @@ public class Vulnerabilite implements Serializable {
 
     String descriptionVulnerabilite;
 
-    /*//MM-B actifs concernes
+    //MM-B actifs concernes
     //child
+
     @JsonIgnore
     @ManyToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER, mappedBy="projets")
     List<Actif> actifsconcernes=new ArrayList<>();
-*/
+
+
     //OO-U
     @OneToOne (cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     Menace menace;

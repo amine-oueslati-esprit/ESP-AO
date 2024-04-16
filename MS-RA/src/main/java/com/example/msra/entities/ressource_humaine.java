@@ -1,3 +1,4 @@
+/*
 package com.example.msra.entities;
 
 import java.io.Serializable;
@@ -12,4 +13,4 @@ public class ressource_humaine extends Actif implements Serializable {
 
     String unite;
 
-}
+}*/

@@ -5,6 +5,7 @@ import lombok.*;
 import java.io.Serializable;
 
 import com.example.msra.entities.enums.niveau_impact;
+import lombok.experimental.FieldDefaults;
 
 @Data
 @Getter
@@ -13,6 +14,8 @@ import com.example.msra.entities.enums.niveau_impact;
 @AllArgsConstructor
 @Builder
 @Entity
+@FieldDefaults(level = AccessLevel.PRIVATE)
+
 public class Scenario implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

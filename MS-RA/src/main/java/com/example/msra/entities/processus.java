@@ -1,3 +1,4 @@
+/*
 package com.example.msra.entities;
 
 public class processus extends Actif {
@@ -16,3 +17,4 @@ public class processus extends Actif {
 
     String fournisseurs;
 }
+*/

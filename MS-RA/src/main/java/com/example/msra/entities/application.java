@@ -1,3 +1,4 @@
+/*
 package com.example.msra.entities;
 
 public class application extends Actif {
@@ -5,4 +6,4 @@ public class application extends Actif {
     String desc_app;
     String editeur;
     String hebergement;
-}
+}*/
