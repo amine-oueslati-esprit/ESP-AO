@@ -49,5 +49,4 @@ public class Actif implements Serializable {
     @ManyToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
     List<Vulnerabilite> vulnerabilites =new ArrayList<Vulnerabilite>();
 
-
 }
