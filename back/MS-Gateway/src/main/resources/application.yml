@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: MS-Gateway
+
+  cloud:
+    discovery:
+      enabled: true
+    config:
+      enabled: true
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+#      routes:
+#        - id: MS-RA
+#          uri: lb://SWIGGY-APP
+#          predicates:
+#            - Path=/msra/**
+#
+#        - id: identity-service
+#          uri: lb://IDENTITY-SERVICE
+#          predicates:
+#            - Path=/auth/**
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/kc-iam
+
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+server:
+  port: 9091

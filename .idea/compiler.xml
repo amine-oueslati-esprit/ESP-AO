@@ -7,15 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MS-RA" />
         <module name="MS-Gateway" />
         <module name="MS-Registry" />
+        <module name="MS-RA" />
+        <module name="MS-Keycloak" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="MS-Gateway" options="-parameters" />
+      <module name="MS-Keycloak" options="-parameters" />
       <module name="MS-RA" options="-parameters" />
       <module name="MS-Registry" options="-parameters" />
     </option>

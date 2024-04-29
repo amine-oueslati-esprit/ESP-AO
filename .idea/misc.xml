@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/back/MS-RA/pom.xml" />
         <option value="$PROJECT_DIR$/back/MS-Gateway/pom.xml" />
         <option value="$PROJECT_DIR$/back/MS-Registry/pom.xml" />
+        <option value="$PROJECT_DIR$/back/MS-Keycloak/pom.xml" />
       </list>
     </option>
   </component>
