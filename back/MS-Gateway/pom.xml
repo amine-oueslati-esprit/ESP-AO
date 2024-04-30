@@ -19,7 +19,7 @@
 	</properties>
 	<dependencies>
 
-<!--		pas sur qu'il soit utile le webflux-->
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
