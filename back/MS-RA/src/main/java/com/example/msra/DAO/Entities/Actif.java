@@ -43,10 +43,16 @@ public class Actif implements Serializable {
     @Enumerated
     criticite criticite_valeur_actif;
 
-    //MM-B
+    //MM-B vulnerabilites
     //parent
     @JsonIgnore
     @ManyToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
     List<Vulnerabilite> vulnerabilites =new ArrayList<Vulnerabilite>();
+
+    //MM-B groupe actifs
+    //child
+    @JsonIgnore
+    @ManyToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER, mappedBy="actifList")
+    List <GroupeA> groupeAList=new ArrayList<GroupeA>();
 
 }

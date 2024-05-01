@@ -7,36 +7,36 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("Scenarios")
+@RequestMapping("/Scenarios")
 public class ScenarioC {
     private final IScenarioService ScenarioRest;
 
-    @PostMapping("addScenario")
+    @PostMapping("/addScenario")
     Scenario ajouterScenario(@RequestBody Scenario x){
         return ScenarioRest.addScenario(x);
     }
 
-    @PutMapping("updateScenario")
+    @PutMapping("/updateScenario")
     Scenario modifierScenario(@RequestBody Scenario x){
         return ScenarioRest.updateScenario(x);
     }
 
-    @DeleteMapping("deleteScenario")
+    @DeleteMapping("/deleteScenario")
     void deleteScenario(Scenario x){
         ScenarioRest.deleteScenario(x);
     }
 
-    @DeleteMapping("deleteScenarioById/{id}")
+    @DeleteMapping("/deleteScenarioById/{id}")
     void  deleteScenarioById(@PathVariable long id){
         ScenarioRest.deleteScenario(id);
     }
 
-    @GetMapping("findAllScenarios/")
+    @GetMapping("/findAllScenarios/")
     List<Scenario> findAll(){
         return ScenarioRest.findAll();
     }
 
-    @GetMapping("findOneScenarioById/{id}")
+    @GetMapping("/findOneScenarioById/{id}")
     Scenario findById(@PathVariable long id){
         return ScenarioRest.findById(id);
     }

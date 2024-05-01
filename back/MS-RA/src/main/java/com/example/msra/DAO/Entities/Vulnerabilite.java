@@ -28,7 +28,6 @@ public class Vulnerabilite implements Serializable {
 
     //MM-B actifs concernes
     //child
-
     @JsonIgnore
     @ManyToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER, mappedBy="vulnerabilites")
     List<Actif> actifsconcernes=new ArrayList<>();

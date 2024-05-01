@@ -7,36 +7,36 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("Vulnerabilites")
+@RequestMapping("/Vulnerabilites")
 public class VulnerabiliteC {
     private final IVulnerabiliteService VulnerabiliteRest;
 
-    @PostMapping("addVulnerabilite")
+    @PostMapping("/addVulnerabilite")
     Vulnerabilite ajouterVulnerabilite(@RequestBody Vulnerabilite x){
         return VulnerabiliteRest.addVulnerabilite(x);
     }
 
-    @PutMapping("updateVulnerabilite")
+    @PutMapping("/updateVulnerabilite")
     Vulnerabilite modifierVulnerabilite(@RequestBody Vulnerabilite x){
         return VulnerabiliteRest.updateVulnerabilite(x);
     }
 
-    @DeleteMapping("deleteVulnerabilite")
+    @DeleteMapping("/deleteVulnerabilite")
     void deleteVulnerabilite(Vulnerabilite x){
         VulnerabiliteRest.deleteVulnerabilite(x);
     }
 
-    @DeleteMapping("deleteVulnerabiliteById/{id}")
+    @DeleteMapping("/deleteVulnerabiliteById/{id}")
     void  deleteVulnerabiliteById(@PathVariable long id){
         VulnerabiliteRest.deleteVulnerabilite(id);
     }
 
-    @GetMapping("findAllVulnerabilites/")
+    @GetMapping("/findAllVulnerabilites/")
     List<Vulnerabilite> findAll(){
         return VulnerabiliteRest.findAll();
     }
 
-    @GetMapping("findOneVulnerabiliteById/{id}")
+    @GetMapping("/findOneVulnerabiliteById/{id}")
     Vulnerabilite findById(@PathVariable long id){
         return VulnerabiliteRest.findById(id);
     }

@@ -10,4 +10,6 @@ public interface IActifService {
     Actif updateActif(Actif a);
     void deleteActif(long id);
     void deleteActif(Actif a);
+
+    void affecterActifAGroupe(long idactif, long idgroupea);
 }

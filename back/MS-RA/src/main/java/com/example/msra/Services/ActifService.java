@@ -1,7 +1,9 @@
 package com.example.msra.Services;
 
 import com.example.msra.DAO.Entities.Actif;
+import com.example.msra.DAO.Entities.GroupeA;
 import com.example.msra.DAO.Repositories.actifRepo;
+import com.example.msra.DAO.Repositories.groupeARepo;
 import com.example.msra.Services.Interfaces.IActifService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -11,6 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ActifService implements IActifService {
     private final actifRepo aRepo;
+    private final groupeARepo gRepo;
 
     @Override
     public Actif addActif(Actif a) {
@@ -18,9 +21,7 @@ public class ActifService implements IActifService {
     }
 
     @Override
-    public Actif findById(long id) {
-
-        return aRepo.findById(id).get();
+    public Actif findById(long id) {return aRepo.findById(id).get();
     }
 
     @Override
@@ -43,5 +44,14 @@ public class ActifService implements IActifService {
     public void deleteActif(Actif a) {
         aRepo.delete(a);
 
+    }
+
+    @Override
+    public void affecterActifAGroupe(long idactif, long idgroupea) {
+        Actif actif=aRepo.findById(idactif).get(); //child
+        GroupeA groupe=gRepo.findById(idgroupea).get();//parent
+        //On affecte le child au parent
+        groupe.getActifList().add(actif);
+        gRepo.save(groupe);
     }
 }
